@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="utf-8">
+        <meta name="author" content="Thomas Caillault">        
+        <meta name="keywords" content="Canvas, Rectangles, dessin, souris, aire, couleur">
+        <meta name="description" content="Application permettant de créer à la souris des rectangles et de leur faire opérer un 360 sur eux mêmes lorsqu'on doublie clic dessus. Un boutton est présent pour modifier la couleur des 2 rectangles ayant la plus petites différences d'aire."></m>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="styles/index.css" />
+
+        <title>Entretien Technique X-GIL : Canvas Rectangles</title>
+    </head>
+    <body>
+        <div class="main">
+            <div class="canvas">
+                <canvas id="canvas"></canvas>
+            </div>
+            <div id="div-display">
+                <button id="button">Changer la couleur</button>
+                <div id="infos-rects">
+                    <h4>Liste des Rectangles:</h4>
+                </div>
+            </div>
+        </div>
+    </body>
+    <script src="scripts/drawRects.js"></script>
+    <script src="scripts/canvasRects.js"></script>
+    <script src="scripts/displayListRects.js"></script>
+</html>
