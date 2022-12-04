@@ -1,19 +1,40 @@
 body {
     margin: 0;
-    height: 100vh;
+    min-height: 100vh;
 }
 
 .main {
     display: flex;
     flex-direction: row;
-    flex-wrap: nowrap;
+    flex-wrap: wrap;
     justify-content: center;
     align-items: flex-start;
     padding-left: 20px;
-    padding-top: 100px;
+    padding-top: 70px;
     background: linear-gradient(to bottom, rgba(255, 255, 255, 0.15) 0%, rgba(0, 0, 0, 0.15) 100%), radial-gradient(at top center, rgba(255, 255, 255, 0.40) 0%, rgba(0, 0, 0, 0.40) 120%) #989898;
     background-blend-mode: multiply, multiply;
     height: -webkit-fill-available;
+}
+
+
+.presentation {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: flex-start;
+    padding-left: 7%;
+    margin-top: 40px;
+    margin-bottom: 100px;
+    color: white;
+}
+
+.presentation h1 {
+    margin-bottom: 5px;
+}
+
+.presentation li {
+    font-size: 16px;
 }
 
 .canvas {
