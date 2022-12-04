@@ -19,9 +19,9 @@ class Rect {
         // on supprimer et on dessine que le rectangle
         // mais il peux y avoir des problèmes de suppression si les rectangles sont trop proche les uns des autres
         if (this.w > this.h) {
-            ctx.clearRect(this.x - this.h / 2, this.y - this.w / 2, this.w + this.w / 2, this.w + this.h / 2);
+            ctx.clearRect(this.x - this.h / 2, this.y - this.w / 2, this.w * 2, this.w + this.h);
         } else {
-            ctx.clearRect(this.x - this.h / 2, this.y - this.w / 2, this.w + this.h * 2, this.h + this.w * 2);
+            ctx.clearRect(this.x - this.h / 2, this.y - this.w / 2, this.w + this.h * 2, this.w + this.h * 2);
         }
         ctx.save();
         ctx.translate(this.x + this.w / 2, this.y + this.h / 2);
