@@ -16,27 +16,6 @@ class Rect {
         addInPage(this.id, this.color, this.aire);
     }
     rotation() {
-        /*
-        // avec cette solution les animation sont sacadés si ont lancent plusieurs animations 
-        // clear le canvas
-        ctx.clearRect(0, 0, canvas.width, canvas.height);
-        // on redessine les tous les retangles
-        // mais si on lance plusieurs rotation alors l'animation sera lancé plusieurs fois et on aura des animations sacadées
-        for (let x = 0; x < arrRects.length; x++) {
-            if (arrRects[x].topRot == 1) {
-                ctx.save();
-                ctx.translate(this.x + this.w / 2, this.y + this.h / 2);
-                ctx.rotate((this.rot * Math.PI) / 180);
-                ctx.fillStyle = this.color;
-                ctx.fillRect(-this.w / 2, -this.h / 2, this.w, this.h);
-                ctx.fill();
-                ctx.restore();
-            } else {
-                arrRects[x].draw();
-            }
-        } 
-        */
-
         // on supprimer et on dessine que le rectangle
         // mais il peux y avoir des problèmes de suppression si les rectangles sont trop proche les uns des autres
         if (this.w > this.h) {
@@ -58,6 +37,27 @@ class Rect {
                 arrRects[x].draw();
             }
         }
+
+        /*
+        // avec cette solution les animation sont sacadés si ont lancent plusieurs animations 
+        // clear le canvas
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+        // on redessine les tous les retangles
+        // mais si on lance plusieurs rotation alors l'animation sera lancé plusieurs fois et on aura des animations sacadées
+        for (let x = 0; x < arrRects.length; x++) {
+            if (arrRects[x].topRot == 1) {
+                ctx.save();
+                ctx.translate(this.x + this.w / 2, this.y + this.h / 2);
+                ctx.rotate((this.rot * Math.PI) / 180);
+                ctx.fillStyle = this.color;
+                ctx.fillRect(-this.w / 2, -this.h / 2, this.w, this.h);
+                ctx.fill();
+                ctx.restore();
+            } else {
+                arrRects[x].draw();
+            }
+        } 
+        */
     }
     color(newColor) {
         ctx.fillStyle = newColor;
