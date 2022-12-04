@@ -54,7 +54,7 @@ class Rect {
 
         // On redessine les rectangles car certains on pu être effacer a cause la rotation d'autres rectangles
         for (let x = 0; x < arrRects.length; x++) {
-            if (arrRects[x].topRot == 0 && arrRects[x].topSupp == 0) {
+            if (arrRects[x].topRot == 0) {
                 arrRects[x].draw();
             }
         }
